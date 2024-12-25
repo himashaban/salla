@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,5 +14,76 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:sans-serif, Arial, Helvetica;
+}
+.logo{
+  background: url(https://cdn.salla.network/images/logo/logo-light-wide.svg) 0 0 no-repeat;
+background-size: contain;
+    transform: translate(-9px,10px);
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    margin-left: 40px;
+    margin: 0;
+}
+aside{
+  background-color: #00414D;
+  z-index: 1;
+}
+.links span {
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.links span:hover {
+  background-color: #005b63;
+  color: #ffffff;
+}
+
+.links.active {
+  background-color: #005b63;
+}
+
+.links.active span {
+  color: #ffffff;
+}
+aside ul li {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ #linkz{
+color: #630005;
+}
+
+/*scrollbar-------------------------------------------------------------------------------------------*/
+
+
+/* Style the scrollbar for WebKit browsers */
+aside::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+aside ul {
+  direction: ltr;
+  /* Keeps the text direction normal */
+}
+
+aside::-webkit-scrollbar-track {
+  background: #016e81; /* Background color of the track */
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: #006d7a; /* Color of the scrollbar handle */
+  border-radius: 5px; 
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background-color: #005b63; 
+}
+
+/* For non-WebKit browsers (fallback) */
+aside {
+  scrollbar-color: #a2f2de #002d35; /* Handle and track colors */
+  scrollbar-width: thin; /* Thin scrollbar */
 }
